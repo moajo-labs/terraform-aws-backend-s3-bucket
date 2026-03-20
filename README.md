@@ -1,5 +1,7 @@
 An s3 bucket to use as a terraform backend.
 
+[![Terraform Registry](https://img.shields.io/badge/Terraform%20Registry-moajo--labs%2Fbackend--s3--bucket%2Faws-blue)](https://registry.terraform.io/modules/moajo-labs/backend-s3-bucket/aws/latest)
+
 - Versioning is enabled.
 - public-access-block is enabled.
 - SSE-KMS encryption by dedicated Key.
