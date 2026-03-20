@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
 resource "aws_s3_bucket" "main" {
   bucket = var.bucket_name
 }
@@ -92,6 +83,6 @@ resource "aws_kms_key" "main" {
 }
 
 resource "aws_kms_alias" "main" {
-  name          = "alias/s3-terraform"
+  name          = "alias/${var.kms_alias_name}"
   target_key_id = aws_kms_key.main.key_id
 }

@@ -9,7 +9,7 @@ An s3 bucket to use as a terraform backend.
 
 ```tf
 module "terraform_backend" {
-  source      = "github.com/moajo/terraform-backend-s3-bucket.git?ref=v3.0.0"
+  source      = "moajo-labs/backend-s3-bucket/aws"
   bucket_name = "projecthogehoge-terraform-backend" # Must be a globally unique bucket name
 }
 ```
@@ -18,9 +18,10 @@ module "terraform_backend" {
 
 ## Requirements
 
-| Name                                                   | Version |
-| ------------------------------------------------------ | ------- |
-| <a name="requirement_aws"></a> [aws](#requirement_aws) | ~> 5.0  |
+| Name                                                                     | Version |
+| ------------------------------------------------------------------------ | ------- |
+| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 1.0  |
+| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | ~> 5.0  |
 
 ## Providers
 
@@ -47,15 +48,19 @@ No modules.
 
 ## Inputs
 
-| Name                                                               | Description           | Type     | Default | Required |
-| ------------------------------------------------------------------ | --------------------- | -------- | ------- | :------: |
-| <a name="input_bucket_name"></a> [bucket_name](#input_bucket_name) | Name of the s3 bucket | `string` | n/a     |   yes    |
+| Name                                                                        | Description                                                            | Type     | Default          | Required |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------- | ---------------- | :------: |
+| <a name="input_bucket_name"></a> [bucket_name](#input_bucket_name)          | Name of the s3 bucket                                                  | `string` | n/a              |   yes    |
+| <a name="input_kms_alias_name"></a> [kms_alias_name](#input_kms_alias_name) | Name of the KMS key alias (the 'alias/' prefix is added automatically) | `string` | `"s3-terraform"` |    no    |
 
 ## Outputs
 
-| Name                                                     | Description                                |
-| -------------------------------------------------------- | ------------------------------------------ |
-| <a name="output_bucket"></a> [bucket](#output_bucket)    | Created aws_s3_bucket.                     |
-| <a name="output_kms_key"></a> [kms_key](#output_kms_key) | Created aws_kms_key to encrypt the bucket. |
+| Name                                                                 | Description                                |
+| -------------------------------------------------------------------- | ------------------------------------------ |
+| <a name="output_bucket"></a> [bucket](#output_bucket)                | Created aws_s3_bucket.                     |
+| <a name="output_bucket_arn"></a> [bucket_arn](#output_bucket_arn)    | ARN of the S3 bucket                       |
+| <a name="output_bucket_id"></a> [bucket_id](#output_bucket_id)       | ID of the S3 bucket (bucket name)          |
+| <a name="output_kms_key"></a> [kms_key](#output_kms_key)             | Created aws_kms_key to encrypt the bucket. |
+| <a name="output_kms_key_arn"></a> [kms_key_arn](#output_kms_key_arn) | ARN of the KMS key                         |
 
 <!-- END_TF_DOCS -->
