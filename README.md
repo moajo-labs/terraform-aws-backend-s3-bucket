@@ -60,6 +60,7 @@ No modules.
 | <a name="output_bucket"></a> [bucket](#output_bucket)                | Created aws_s3_bucket.                     |
 | <a name="output_bucket_arn"></a> [bucket_arn](#output_bucket_arn)    | ARN of the S3 bucket                       |
 | <a name="output_bucket_id"></a> [bucket_id](#output_bucket_id)       | ID of the S3 bucket (bucket name)          |
+| <a name="output_bucket_name"></a> [bucket_name](#output_bucket_name) | Name of the S3 bucket                      |
 | <a name="output_kms_key"></a> [kms_key](#output_kms_key)             | Created aws_kms_key to encrypt the bucket. |
 | <a name="output_kms_key_arn"></a> [kms_key_arn](#output_kms_key_arn) | ARN of the KMS key                         |
 
