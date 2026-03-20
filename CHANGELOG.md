@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-03-20
+
+### Added
+
+- `bucket_name` output to expose the S3 bucket name directly
+
 ## [0.2.0] - 2026-03-20
 
 ### Added
