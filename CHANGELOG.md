@@ -7,14 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-03-20
+
 ### Added
 
 - `versions.tf` with `required_version >= 1.0`
 - `kms_alias_name` variable to make KMS alias configurable
 - `bucket_arn`, `bucket_id`, `kms_key_arn` outputs
 - Usage example in `examples/simple/`
-- GitHub Actions CI (`terraform fmt -check`, `terraform validate`)
+- GitHub Actions CI (`terraform fmt -check`, `terraform validate`, `terraform test`)
 - `.gitignore`
+- Terraform tests with mock provider (8 test cases)
 
 ### Changed
 
