@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-03-20
+
+### Changed
+
+- Relaxed AWS provider version constraint from `~> 5.0` to `>= 5.0`
+
 ## [0.3.0] - 2026-03-20
 
 ### Added
