@@ -13,6 +13,11 @@ output "bucket_id" {
   description = "ID of the S3 bucket (bucket name)"
 }
 
+output "bucket_name" {
+  value       = aws_s3_bucket.main.bucket
+  description = "Name of the S3 bucket"
+}
+
 output "kms_key" {
   value       = aws_kms_key.main
   description = "Created aws_kms_key to encrypt the bucket."
